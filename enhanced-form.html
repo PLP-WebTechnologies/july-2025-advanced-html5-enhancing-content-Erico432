@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form</title>
+</head>
+<body>
+    <header>
+        <h1>Enhanced HTML5 Content & Form Demonstration</h1>
+        <p>This page showcases advanced HTML5 content elements and a fully-featured form with native validation.</p>
+    </header>
+
+    <section id="lists">
+        <h2>HTML5 Lists</h2>
+        
+        <h3>Ordered List (Top 3 Programming Languages)</h3>
+        <ol>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+        </ol>
+        
+        <h3>Unordered List (Web Development Components)</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Backend Technologies</li>
+        </ul>
+        
+        <h3>Description List (HTML5 Terms)</h3>
+        <dl>
+            <dt>Semantic Elements</dt>
+            <dd>Elements like &lt;header&gt;, &lt;footer&gt;, &lt;article&gt; that clearly describe their meaning.</dd>
+            
+            <dt>Canvas</dt>
+            <dd>An element used to draw graphics via scripting (usually JavaScript).</dd>
+            
+            <dt>Web Storage</dt>
+            <dd>API for storing data in the browser, including localStorage and sessionStorage.</dd>
+        </dl>
+    </section>
+
+    <section id="tables">
+        <h2>HTML5 Tables</h2>
+        
+        <table>
+            <caption>Monthly Budget Summary</caption>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Budgeted</th>
+                    <th>Actual</th>
+                    <th>Difference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Housing</td>
+                    <td>ksh1,200</td>
+                    <td>ksh1,250</td>
+                    <td>-ksh50</td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>ksh600</td>
+                    <td>ksh550</td>
+                    <td>+ksh50</td>
+                </tr>
+                <tr>
+                    <td>Transportation</td>
+                    <td>ksh300</td>
+                    <td>ksh280</td>
+                    <td>+ksh20</td>
+                </tr>
+                <tr>
+                    <td>Entertainment</td>
+                    <td>ksh200</td>
+                    <td>ksh350</td>
+                    <td>-ksh150</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th>ksh2,300</th>
+                    <th>ksh2,430</th>
+                    <th>-ksh130</th>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section id="media">
+        <h2>HTML5 Media</h2>
+        
+        <h3>Image with Figure and Caption</h3>
+        <figure>
+            <img src="https://images.pexels.com/photos/27048764/pexels-photo-27048764.jpeg" alt="Placeholder image demonstrating responsive design" width="300" height="300">
+            <figcaption>Figure 1: Example of a responsive image that scales with the viewport.</figcaption>
+        </figure>
+        
+        <h3>Video Element</h3>
+        <video controls>
+            <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" width="300" height="300" >
+            Your browser does not support the video tag.
+        </video>
+        
+        <h3>Audio Element</h3>
+        <audio controls>
+            <source src="https://samplelib.com/lib/preview/mp3/sample-3s.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section id="form">
+        <h2>HTML5 Form with Native Validation</h2>
+        
+        <form id="userRegistration" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div>
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" id="fullName" name="fullName" required minlength="3" maxlength="50" placeholder="Enter your full name" autocomplete="name">
+                </div>
+                
+                <div>
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com" autocomplete="email">
+                </div>
+                
+                <div>
+                    <label for="password">Password*</label>
+                    <input type="password" id="password" name="password" required minlength="8" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" placeholder="Minimum 8 characters with at least one letter and one number" autocomplete="new-password">
+                </div>
+                
+                <div>
+                    <label for="confirmPassword">Confirm Password*</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Re-enter your password" autocomplete="new-password">
+                </div>
+                
+                <div>
+                    <label for="birthDate">Date of Birth*</label>
+                    <input type="date" id="birthDate" name="birthDate" required max="2005-12-31">
+                </div>
+                
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 0700 000 000" autocomplete="tel">
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div>
+                    <label for="website">Website</label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com">
+                </div>
+                
+                <div>
+                    <label for="favColor">Favorite Color</label>
+                    <input type="color" id="favColor" name="favColor" value="#3498db">
+                </div>
+                
+                <div>
+                    <label for="experience">Years of Experience</label>
+                    <input type="range" id="experience" name="experience" min="0" max="20" value="5">
+                    <output for="experience" id="experienceOutput">5</output>
+                </div>
+                
+                <div>
+                    <label for="bio">Biography</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..." maxlength="500"></textarea>
+                </div>
+                
+                <div>
+                    <label for="country">Country*</label>
+                    <select id="country" name="country" required>
+                        <option value="">-- Select a Country --</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                        <option value="JP">Japan</option>
+                        <option value="OT">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <div>
+                    <label>Preferred Contact Method*</label>
+                    <div>
+                        <input type="radio" id="contactEmail" name="contactMethod" value="email" required checked>
+                        <label for="contactEmail">Email</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                        <label for="contactPhone">Phone</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="contactText" name="contactMethod" value="text">
+                        <label for="contactText">Text Message</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label>Interests (Select all that apply)</label>
+                    <div>
+                        <input type="checkbox" id="interestTech" name="interests" value="technology">
+                        <label for="interestTech">Technology</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interestSports" name="interests" value="sports">
+                        <label for="interestSports">Sports</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interestMusic" name="interests" value="music">
+                        <label for="interestMusic">Music</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="interestTravel" name="interests" value="travel">
+                        <label for="interestTravel">Travel</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="newsletter">Subscribe to Newsletter</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Account Security</legend>
+                
+                <div>
+                    <label for="securityQuestion">Security Question*</label>
+                    <select id="securityQuestion" name="securityQuestion" required>
+                        <option value="">-- Select a Security Question --</option>
+                        <option value="pet">What was your first pet's name?</option>
+                        <option value="school">What elementary school did you attend?</option>
+                        <option value="mother">What is your mother's maiden name?</option>
+                        <option value="city">In what city were you born?</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="securityAnswer">Security Answer*</label>
+                    <input type="text" id="securityAnswer" name="securityAnswer" required minlength="2">
+                </div>
+                
+                <div>
+                    <label for="twoFactor">Enable Two-Factor Authentication</label>
+                    <input type="checkbox" id="twoFactor" name="twoFactor">
+                </div>
+            </fieldset>
+            
+            <div>
+                <button type="submit">Register</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 HTML5 Demonstration. All rights reserved.</p>
+    </footer>
+</body>
+</html>
